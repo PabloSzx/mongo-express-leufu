@@ -77,21 +77,17 @@
     "supertest": "^3.0.0",
     "webpack": "^2.4.1"
   },
-  "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=3.0.0"
-  },
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
     "start": "cross-env NODE_ENV=production node app",
-    "start-dev": "concurrently --kill-others \"cross-env NODE_ENV=production nodemon app\" \"cross-env NODE_ENV=production npm run build-dev\"",
+    "start-dev": "concurrently --kill-others \"cross-env NODE_ENV=production nodemon app\" \"cross-env NODE_ENV=production yarn build-dev\"",
     "build-dev": "webpack --watch",
     "build": "cross-env NODE_ENV=production webpack",
-    "test": "npm run mocha && npm run lint",
+    "test": "yarn mocha && yarn lint",
     "mocha": "cross-env NODE_ENV=test mocha",
     "test-watch": "cross-env NODE_ENV=test mocha --watch --reporter spec",
-    "prepublish": "npm run build"
+    "prepublish": "yarn build"
   },
   "pre-commit": [
     "test"

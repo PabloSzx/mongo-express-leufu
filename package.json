@@ -87,7 +87,7 @@
     "test": "yarn mocha && yarn lint",
     "mocha": "cross-env NODE_ENV=test mocha",
     "test-watch": "cross-env NODE_ENV=test mocha --watch --reporter spec",
-    "prepublish": "yarn build"
+    "postinstall": "yarn build"
   },
   "pre-commit": [
     "test"

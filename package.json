@@ -86,8 +86,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "test": "yarn mocha && yarn lint",
     "mocha": "cross-env NODE_ENV=test mocha",
-    "test-watch": "cross-env NODE_ENV=test mocha --watch --reporter spec",
-    "postinstall": "yarn build"
+    "test-watch": "cross-env NODE_ENV=test mocha --watch --reporter spec"
   },
   "pre-commit": [
     "test"
